@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import MainTitle from './components/MainTitle.vue'
+
 </script>
 
 <template>
@@ -7,15 +9,17 @@ import { RouterLink, RouterView } from 'vue-router'
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <h1 class="green">Hello ƪ(˘⌣˘)ʃ</h1>
+      <MainTitle title="Some Pages" />
       <nav>
+        <RouterLink to="/home">Home</RouterLink>
         <RouterLink to="/login">Login</RouterLink>
         <RouterLink to="/tickets">Tickets</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/search">Search</RouterLink>
 
       </nav>
     </div>
   </header>
+  <RouterView />
 </template>
 
 <style scoped>
