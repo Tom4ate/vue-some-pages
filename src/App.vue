@@ -6,15 +6,20 @@ import MainTitle from './components/MainTitle.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <MainTitle title="Some Pages" />
       <nav>
-        <RouterLink to="/home">Home</RouterLink>
-        <RouterLink to="/login">Login</RouterLink>
-        <RouterLink to="/tickets">Tickets</RouterLink>
-        <RouterLink to="/search">Search</RouterLink>
+        <div class="item">
+          <RouterLink to="/home">Home</RouterLink>
+        </div>
+        <div class="item">
+          <RouterLink to="/login">Login</RouterLink>
+        </div>
+        <div class="item">
+          <RouterLink to="/tickets">Tickets</RouterLink>
+        </div>
+        <div class="item">
+          <RouterLink to="/search">Search</RouterLink>
+        </div>
 
       </nav>
     </div>
@@ -23,65 +28,42 @@ import MainTitle from './components/MainTitle.vue'
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
 
 nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  overflow: hidden;
+  background-color: #131313ff ;
+  position: fixed;
+  top: 0px;
   width: 100%;
-  font-size: 12px;
+  height: 10vh;
+  z-index: 100;
+}
+
+nav .item {
+  padding: 10px;
+  float: right;
+  color: #00ff00;
+  display: grid;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  align-content: center;
+  justify-content: center;
   text-align: center;
-  margin-top: 2rem;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  height: 4vh;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.navbar .item:hover {
+  cursor: pointer;
+  color: #131313ff;
+  background-color: #00ff00;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
 </style>
