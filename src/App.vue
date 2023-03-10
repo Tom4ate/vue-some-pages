@@ -9,7 +9,7 @@ import MainTitle from './components/MainTitle.vue'
     <div class="wrapper">
       <nav>
         <div class="item">
-          <RouterLink to="/home">Home</RouterLink>
+          <RouterLink to="/">Home</RouterLink>
         </div>
         <div class="item">
           <RouterLink to="/login">Login</RouterLink>

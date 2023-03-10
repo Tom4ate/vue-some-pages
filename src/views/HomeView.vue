@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import CircleButtons from '../components/CircleButtons.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <CircleButtons />
   </main>
 </template>
